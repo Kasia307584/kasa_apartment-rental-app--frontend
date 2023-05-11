@@ -1,7 +1,17 @@
+import backgroundImg from "./images/background-img.png";
+import Cards from "./Cards";
+
 export default function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-    </div>
+    <>
+      <main className="main">
+        <section className="background">
+          <img src={backgroundImg} alt="mountains" className="background-img" />
+          <p className="background-text">Chez vous, partout et ailleurs</p>
+        </section>
+
+        <Cards />
+      </main>
+    </>
   );
 }
