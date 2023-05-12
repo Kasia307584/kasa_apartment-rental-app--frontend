@@ -5,8 +5,7 @@ export default function Card() {
   return (
     <section className="announcements">
       {data.map((item) => (
-        <>
-          <p className="cover-title">{item.title}</p>
+        <div className="cover-wrapper">
           <div>
             <Link to="/details">
               <img
@@ -16,7 +15,8 @@ export default function Card() {
               ></img>
             </Link>
           </div>
-        </>
+          <p className="cover-title">{item.title}</p>
+        </div>
       ))}
     </section>
   );
