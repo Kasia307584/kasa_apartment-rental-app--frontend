@@ -7,8 +7,10 @@ export default function Details() {
     <main className="main">
       <section className="gallery">
         <img src={galleryImg} alt="appartement" className="gallery-img" />
-        <i className="fas fa-chevron-down"></i>
-        <i className="fas fa-chevron-up"></i>
+        <div className="chevrons-wrapper">
+          <i className="fas fa-chevron-left"></i>
+          <i className="fas fa-chevron-right"></i>
+        </div>
       </section>
       <section className="info">
         <div className="main-info">
@@ -26,7 +28,6 @@ export default function Details() {
           <div className="second-info">
             <div className="host">
               <p className="host-name">Alexandre Dumas</p>
-
               <img
                 src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-2.jpg"
                 alt="host"
@@ -39,7 +40,7 @@ export default function Details() {
         <div className="dropmenu-wrapper">
           <article className="dropmenu">
             <button className="dropbtn">
-              Fiabilité&emsp;<i className="fas fa-chevron-down"></i>
+              Fiabilité<i className="fas fa-chevron-down"></i>
               <i className="fas fa-chevron-up"></i>
             </button>
             <p className="text">
