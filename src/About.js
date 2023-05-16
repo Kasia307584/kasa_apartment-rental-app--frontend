@@ -10,7 +10,7 @@ export default function About() {
           className="background-img"
         />
       </section>
-      <section className="info">
+      <section className="about">
         <button className="dropbtn">
           Fiabilité&emsp;<i className="fas fa-chevron-down"></i>
           <i className="fas fa-chevron-up"></i>

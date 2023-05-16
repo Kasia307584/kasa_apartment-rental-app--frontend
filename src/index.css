@@ -113,7 +113,6 @@ a {
   background-color: var(--black);
   padding: 40px 0 30px 0;
   text-align: center;
-  margin-top: 9rem;
 }
 .footer-text {
   color: var(--white);
@@ -124,29 +123,35 @@ a {
 }
 
 /* ABOUT PAGE */
-.info {
-  margin-top: 30px;
+.about {
+  width: 85%;
+  margin: auto;
 }
 .dropbtn {
   width: 100%;
   height: 52px;
   background-color: var(--primary-1);
   color: var(--white);
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   font-size: 20px;
-  margin-top: 12px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 15px;
+  z-index: 1;
+  position: relative;
 }
 .text {
   background-color: var(--neutral-1);
   color: var(--primary-1);
   font-size: 18px;
-  padding: 30px 15px;
+  padding: 35px 15px 30px;
   line-height: 28px;
+  margin-top: -10px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 /* DETAILS PAGE */
@@ -173,6 +178,7 @@ a {
 .main-info {
   display: flex;
   justify-content: space-between;
+  margin-top: 25px;
 }
 .title {
   color: var(--primary-1);
@@ -180,12 +186,13 @@ a {
 }
 .location {
   color: var(--primary-1);
-  padding-bottom: 15px;
+  padding-bottom: 23px;
 }
 .tags ul {
   list-style-type: none;
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .tags ul li {
   background-color: var(--primary-1);
@@ -224,9 +231,8 @@ a {
 
 /* ERROR PAGE */
 .main__error {
-  width: 500px;
-  margin: auto;
   text-align: center;
+  padding: 80px;
 }
 .error-main,
 .error-message {
@@ -234,9 +240,16 @@ a {
 }
 .error-main {
   font-size: 200px;
-  width: 295px;
   margin: auto;
+  font-weight: 900;
+}
+.error-message {
+  font-weight: 500;
 }
 .homelink {
   text-decoration: underline;
+  font-size: 20px;
+}
+.homelink-wrapper {
+  padding-top: 170px;
 }

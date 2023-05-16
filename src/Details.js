@@ -51,7 +51,7 @@ export default function Details() {
           </article>
           <article className="dropmenu">
             <button className="dropbtn">
-              Respect&emsp;<i className="fas fa-chevron-down"></i>
+              Respect<i className="fas fa-chevron-down"></i>
               <i className="fas fa-chevron-up"></i>
             </button>
             <p className="text">
