@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import logo from "./images/logo.png";
 import logoFooter from "./images/logo_white.png";
 
@@ -13,10 +13,20 @@ export default function Layout() {
           <nav className="navbar">
             <ul>
               <li>
-                <Link to="/">Accueil</Link>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                >
+                  Accueil
+                </NavLink>
               </li>
               <li>
-                <Link to="/about">A Propos</Link>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                >
+                  A Propos
+                </NavLink>
               </li>
             </ul>
           </nav>

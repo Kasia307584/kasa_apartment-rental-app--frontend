@@ -38,9 +38,9 @@ export default function Details() {
           </div>
         </div>
         <div className="dropmenu-wrapper">
-          <article className="dropmenu">
+          <article className="dropmenu dropmenu__details">
             <button className="dropbtn">
-              Fiabilité<i className="fas fa-chevron-down"></i>
+              Description<i className="fas fa-chevron-down"></i>
               <i className="fas fa-chevron-up"></i>
             </button>
             <p className="text">
@@ -49,9 +49,9 @@ export default function Details() {
               entraînera une exclusion de notre plateforme.
             </p>
           </article>
-          <article className="dropmenu">
+          <article className="dropmenu dropmenu__details">
             <button className="dropbtn">
-              Respect<i className="fas fa-chevron-down"></i>
+              Equipements<i className="fas fa-chevron-down"></i>
               <i className="fas fa-chevron-up"></i>
             </button>
             <p className="text">

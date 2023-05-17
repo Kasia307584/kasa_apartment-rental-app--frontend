@@ -58,6 +58,9 @@ a {
 .navbar ul li {
   padding-left: 20px;
 }
+.active-link {
+  text-decoration: underline;
+}
 .background {
   display: flex;
   flex-direction: column;
@@ -217,7 +220,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.dropmenu {
+.dropmenu__details {
   width: 45%;
 }
 .fa-chevron-up {
