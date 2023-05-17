@@ -28,7 +28,7 @@ export default function Layout() {
         <div className="footer-logo">
           <img src={logoFooter} alt="logo" className="logo_white" />
         </div>
-        <div className="footer-text">© 2020 Kasa. All rights reserved</div>
+        <p className="footer-text">© 2020 Kasa. All rights reserved</p>
       </footer>
     </>
   );
