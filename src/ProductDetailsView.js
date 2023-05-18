@@ -2,6 +2,7 @@ import data from "./data.json";
 import galleryImg from "./images/gallery-img.png";
 import { useParams } from "react-router-dom";
 import Error from "./Error";
+import Dropdown from "./Dropdown";
 
 export default function ProductDetailsView() {
   const { productId } = useParams();
@@ -45,28 +46,18 @@ export default function ProductDetailsView() {
           </div>
         </div>
         <div className="dropmenu-wrapper">
-          <article className="dropmenu dropmenu__details">
-            <button className="dropbtn">
-              Description<i className="fas fa-chevron-down"></i>
-              <i className="fas fa-chevron-up"></i>
-            </button>
-            <p className="text">
-              La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
-              comportement discriminatoire ou de perturbation du voisinage
-              entraînera une exclusion de notre plateforme.
-            </p>
-          </article>
-          <article className="dropmenu dropmenu__details">
-            <button className="dropbtn">
-              Equipements<i className="fas fa-chevron-down"></i>
-              <i className="fas fa-chevron-up"></i>
-            </button>
-            <p className="text">
-              La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
-              comportement discriminatoire ou de perturbation du voisinage
-              entraînera une exclusion de notre plateforme.
-            </p>
-          </article>
+          <Dropdown
+            className="dropmenu__details"
+            name="Description"
+            text={product.description}
+          />
+          <Dropdown
+            className="dropmenu__details"
+            name="Equipements"
+            text={product.equipments.map((item) => (
+              <li>{item}</li>
+            ))}
+          />
         </div>
       </section>
     </main>
