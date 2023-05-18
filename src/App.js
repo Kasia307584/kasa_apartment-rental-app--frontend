@@ -4,7 +4,7 @@ import Layout from "./Layout";
 import About from "./About";
 import Home from "./Home";
 import Error from "./Error";
-import Details from "./Details";
+import ProductDetailsView from "./ProductDetailsView";
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="details/:productId" element={<Details />} />
+        <Route path="details/:productId" element={<ProductDetailsView />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

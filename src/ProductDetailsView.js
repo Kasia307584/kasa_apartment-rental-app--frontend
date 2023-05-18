@@ -3,7 +3,7 @@ import galleryImg from "./images/gallery-img.png";
 import { useParams } from "react-router-dom";
 import Error from "./Error";
 
-export default function Details() {
+export default function ProductDetailsView() {
   const { productId } = useParams();
   const product = data.find((item) => item.id === productId);
   if (product === undefined) {

@@ -1,7 +1,7 @@
 import data from "./data.json";
 import { Link } from "react-router-dom";
 
-export default function Card() {
+export default function ProductCards() {
   return (
     <section className="announcements">
       {data.map((item) => (

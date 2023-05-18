@@ -1,5 +1,5 @@
 import backgroundImg from "./images/background-img.png";
-import Cards from "./Cards";
+import ProductCards from "./ProductCards";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           </h1>
         </section>
 
-        <Cards />
+        <ProductCards />
       </main>
     </>
   );
