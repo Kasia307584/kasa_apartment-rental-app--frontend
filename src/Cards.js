@@ -5,9 +5,9 @@ export default function Card() {
   return (
     <section className="announcements">
       {data.map((item) => (
-        <div className="cover-wrapper">
+        <div className="cover-wrapper" key={`card-${item.id}`}>
           <div>
-            <Link to="/details">
+            <Link to={`/details/${item.id}`}>
               <img
                 src={item.cover}
                 alt="appartement"

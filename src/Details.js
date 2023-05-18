@@ -1,8 +1,15 @@
 import data from "./data.json";
 import galleryImg from "./images/gallery-img.png";
+import { useParams } from "react-router-dom";
+import Error from "./Error";
 
 export default function Details() {
-  console.log(data[0].location);
+  const { productId } = useParams();
+  const product = data.find((item) => item.id === productId);
+  if (product === undefined) {
+    return <Error />;
+  }
+
   return (
     <main className="main">
       <section className="gallery">
@@ -15,7 +22,7 @@ export default function Details() {
       <section className="info">
         <div className="main-info">
           <div className="first-info">
-            <h1 className="title">Cozy loft on the Canal Saint-Martin</h1>
+            <h1 className="title">{product.title}</h1>
             <p className="location">Paris, Île-de-France</p>
             <div className="tags">
               <ul>
