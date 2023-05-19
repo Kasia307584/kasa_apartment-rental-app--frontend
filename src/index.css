@@ -358,6 +358,12 @@ ul {
   }
 
   /* ABOUT PAGE - mobile */
+  .about {
+    width: 100%;
+  }
+  .dropbtn {
+    margin-top: 23px;
+  }
 
   /* DETAILS PAGE - mobile */
   .gallery-img {
@@ -422,4 +428,20 @@ ul {
   }
 
   /* ERROR PAGE - mobile */
+  .main__error {
+    padding: 120px 20px 50px 20px;
+  }
+  .error-main {
+    font-size: 95px;
+  }
+  .error-message {
+    font-size: 18px;
+  }
+  .break-point::before {
+    content: "\a";
+    white-space: pre;
+  }
+  .homelink {
+    font-size: 14px;
+  }
 }

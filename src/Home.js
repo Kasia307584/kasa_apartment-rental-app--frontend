@@ -8,7 +8,7 @@ export default function Home() {
         <section className="background">
           <img src={backgroundImg} alt="mountains" className="background-img" />
           <h1 className="background-text">
-            Chez vous, <span id="break-point">partout et ailleurs</span>
+            Chez vous, <span className="break-point">partout et ailleurs</span>
           </h1>
         </section>
 
