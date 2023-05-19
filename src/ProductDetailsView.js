@@ -1,5 +1,4 @@
 import data from "./data.json";
-import galleryImg from "./images/gallery-img.png";
 import { useParams } from "react-router-dom";
 import Error from "./Error";
 import Dropdown from "./Dropdown";
@@ -14,7 +13,11 @@ export default function ProductDetailsView() {
   return (
     <main className="main">
       <section className="gallery">
-        <img src={galleryImg} alt="appartement" className="gallery-img" />
+        <img
+          src={product.pictures[0]}
+          alt="appartement"
+          className="gallery-img"
+        />
         <div className="chevrons-wrapper">
           <i className="fas fa-chevron-left"></i>
           <i className="fas fa-chevron-right"></i>
@@ -24,25 +27,47 @@ export default function ProductDetailsView() {
         <div className="main-info">
           <div className="first-info">
             <h1 className="title">{product.title}</h1>
-            <p className="location">Paris, Île-de-France</p>
+            <p className="location">{product.location}</p>
             <div className="tags">
               <ul>
-                <li>Cozy</li>
-                <li>Canal</li>
-                <li>Paris 10</li>
+                {product.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
               </ul>
             </div>
           </div>
           <div className="second-info">
             <div className="host">
-              <p className="host-name">Alexandre Dumas</p>
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-2.jpg"
-                alt="host"
-                className="host-img"
-              />
+              <p className="host-name">{product.host.name}</p>
+              <img src={product.host.picture} alt="host" className="host-img" />
             </div>
-            <div className="rating">Raiting here</div>
+            <div className="rating">
+              <i
+                className={`fa-solid fa-star ${
+                  product.rating >= 1 ? "star-active" : ""
+                }`}
+              ></i>
+              <i
+                className={`fa-solid fa-star ${
+                  product.rating >= 2 ? "star-active" : ""
+                }`}
+              ></i>
+              <i
+                className={`fa-solid fa-star ${
+                  product.rating >= 3 ? "star-active" : ""
+                }`}
+              ></i>
+              <i
+                className={`fa-solid fa-star ${
+                  product.rating >= 4 ? "star-active" : ""
+                }`}
+              ></i>
+              <i
+                className={`fa-solid fa-star ${
+                  product.rating >= 5 ? "star-active" : ""
+                }`}
+              ></i>
+            </div>
           </div>
         </div>
         <div className="dropmenu-wrapper">
@@ -53,7 +78,7 @@ export default function ProductDetailsView() {
           />
           <Dropdown
             className="dropmenu__details"
-            name="Equipements"
+            name="Équipements"
             text={product.equipments.map((item) => (
               <li>{item}</li>
             ))}
