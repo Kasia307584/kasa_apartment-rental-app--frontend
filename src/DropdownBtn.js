@@ -5,10 +5,10 @@ export default function Dropdown(props) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  function openDropdown() {
+  function handleOpenDropdownClick() {
     setIsOpen(true);
   }
-  function closeDropdown() {
+  function handleCloseDropdownClick() {
     setIsOpen(false);
   }
 
@@ -18,12 +18,12 @@ export default function Dropdown(props) {
         {name}
         <i
           className="fas fa-chevron-down"
-          onClick={openDropdown}
+          onClick={handleOpenDropdownClick}
           style={{ display: isOpen ? "none" : "block" }}
         ></i>
         <i
           className="fas fa-chevron-up"
-          onClick={closeDropdown}
+          onClick={handleCloseDropdownClick}
           style={{ display: isOpen ? "block" : "none" }}
         ></i>
       </button>

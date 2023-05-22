@@ -1,7 +1,7 @@
 import data from "./data.json";
 import { useParams } from "react-router-dom";
-import Error from "./Error";
-import Dropdown from "./Dropdown";
+import Error from "./ErrorView";
+import DropdownBtn from "./DropdownBtn";
 
 export default function ProductDetailsView() {
   const { productId } = useParams();
@@ -71,12 +71,12 @@ export default function ProductDetailsView() {
           </div>
         </div>
         <div className="dropmenu-wrapper">
-          <Dropdown
+          <DropdownBtn
             className="dropmenu__details"
             name="Description"
             text={product.description}
           />
-          <Dropdown
+          <DropdownBtn
             className="dropmenu__details"
             name="Équipements"
             text={product.equipments.map((item) => (
