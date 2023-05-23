@@ -1,36 +1,22 @@
 import data from "./data.json";
 import { useParams } from "react-router-dom";
-import Error from "./ErrorView";
+import ErrorView from "./ErrorView";
 import DropdownBtn from "./DropdownBtn";
-import { useState } from "react";
+import PhotoGallerySwitch from "./PhotoGallerySwitch";
 
 export default function ProductDetailsView() {
   const { productId } = useParams();
   const product = data.find((item) => item.id === productId);
-  const photos = product.pictures;
-
-  const [index, setIndex] = useState(0);
-
-  function handleNextClick() {
-    setIndex((photoIndex) => (photoIndex + 1) % photos.length);
-  }
-  function handlePreviousClick() {
-    setIndex((photoIndex) => (photoIndex + photos.length - 1) % photos.length);
-  }
 
   if (product === undefined) {
-    return <Error />;
+    return <ErrorView />;
   }
+
+  const photos = product.pictures;
 
   return (
     <main className="main">
-      <section className="gallery">
-        <img src={photos[index]} alt="appartement" className="gallery-img" />
-        <div className="chevrons-wrapper">
-          <i className="fas fa-chevron-left" onClick={handlePreviousClick}></i>
-          <i className="fas fa-chevron-right" onClick={handleNextClick}></i>
-        </div>
-      </section>
+      <PhotoGallerySwitch photos={photos} />
       <section className="info">
         <div className="main-info">
           <div className="first-info">

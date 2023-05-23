@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Error() {
+export default function ErrorView() {
   return (
     <main className="main main__error">
       <h1 className="error-main">404</h1>
