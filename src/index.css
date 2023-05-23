@@ -193,7 +193,7 @@ ul {
 .fa-chevron-right {
   font-size: 70px;
   color: var(--white);
-  margin-top: -275px;
+  margin-top: -245px;
 }
 .main-info {
   display: flex;
@@ -230,7 +230,7 @@ ul {
   justify-content: space-between;
 }
 .dropmenu__details {
-  width: 45%;
+  width: 47%;
 }
 .fa-chevron-up {
   font-size: 28px;
@@ -367,13 +367,13 @@ ul {
 
   /* DETAILS PAGE - mobile */
   .gallery-img {
-    height: 300px;
+    height: 255px;
     border-radius: 10px;
   }
   .fa-chevron-left,
   .fa-chevron-right {
     font-size: 28px;
-    margin-top: -178px;
+    margin-top: -145px;
   }
   .fa-chevron-left {
     margin-left: 8px;
