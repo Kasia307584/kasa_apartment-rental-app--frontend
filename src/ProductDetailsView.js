@@ -24,8 +24,8 @@ export default function ProductDetailsView() {
             <p className="location">{product.location}</p>
             <div className="tags">
               <ul>
-                {product.tags.map((tag) => (
-                  <li>{tag}</li>
+                {product.tags.map((tag, index) => (
+                  <li key={index}>{tag}</li>
                 ))}
               </ul>
             </div>
@@ -73,8 +73,8 @@ export default function ProductDetailsView() {
           <DropdownBtn
             className="dropmenu__details"
             name="Équipements"
-            text={product.equipments.map((item) => (
-              <li>{item}</li>
+            text={product.equipments.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           />
         </div>
