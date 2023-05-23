@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Gallery(props) {
+export default function PhotoGallerySwitch(props) {
   const { photos } = props;
 
   const [index, setIndex] = useState(0);
@@ -15,10 +15,13 @@ export default function Gallery(props) {
   return (
     <section className="gallery">
       <img src={photos[index]} alt="appartement" className="gallery-img" />
-      <div className="chevrons-wrapper">
-        <i className="fas fa-chevron-left" onClick={handleNextClick}></i>
-        <i className="fas fa-chevron-right" onClick={handlePreviousClick}></i>
-      </div>
+
+      {photos[1] && (
+        <div className="chevrons-wrapper">
+          <i className="fas fa-chevron-left" onClick={handleNextClick}></i>
+          <i className="fas fa-chevron-right" onClick={handlePreviousClick}></i>
+        </div>
+      )}
     </section>
   );
 }
