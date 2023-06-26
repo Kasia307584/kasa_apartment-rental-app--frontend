@@ -195,10 +195,17 @@ ul {
   color: var(--white);
   margin-top: -245px;
 }
+.img-order {
+  margin-top: -55px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+}
 .main-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 55px;
 }
 .title {
   color: var(--primary-1);

@@ -17,10 +17,20 @@ export default function PhotoGallerySwitch(props) {
       <img src={photos[index]} alt="appartement" className="gallery-img" />
 
       {photos[1] && (
-        <div className="chevrons-wrapper">
-          <i className="fas fa-chevron-left" onClick={handleNextClick}></i>
-          <i className="fas fa-chevron-right" onClick={handlePreviousClick}></i>
-        </div>
+        <>
+          <div className="chevrons-wrapper">
+            <i
+              className="fas fa-chevron-left"
+              onClick={handlePreviousClick}
+            ></i>
+            <i className="fas fa-chevron-right" onClick={handleNextClick}></i>
+          </div>
+          <div className="img-order">
+            <p>
+              {index + 1}/{photos.length}
+            </p>
+          </div>
+        </>
       )}
     </section>
   );
