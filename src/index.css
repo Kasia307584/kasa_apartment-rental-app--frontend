@@ -388,6 +388,9 @@ ul {
   .fa-chevron-right {
     margin-right: 8px;
   }
+  .img-order {
+    display: none;
+  }
   .main-info {
     flex-direction: column;
     margin-top: 8px;
