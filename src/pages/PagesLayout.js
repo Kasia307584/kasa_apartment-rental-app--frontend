@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
-import logo from "./images/logo.png";
-import logoFooter from "./images/logo_white.png";
+import logo from "../images/logo.png";
+import logoFooter from "../images/logo_white.png";
 
 export default function Layout() {
   return (

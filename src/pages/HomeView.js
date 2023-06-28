@@ -1,5 +1,5 @@
-import backgroundImg from "./images/background-img.png";
-import ProductCards from "./ProductCards";
+import backgroundImg from "../images/background-img.png";
+import ProductCards from "../components/ProductCards";
 
 export default function Home() {
   return (

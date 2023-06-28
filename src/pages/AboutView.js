@@ -1,5 +1,5 @@
-import backgroundImgAbout from "./images/background-img_about.png";
-import DropdownBtn from "./DropdownBtn";
+import backgroundImgAbout from "../images/background-img_about.png";
+import DropdownBtn from "../components/DropdownBtn";
 
 export default function AboutView() {
   return (

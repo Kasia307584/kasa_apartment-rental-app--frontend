@@ -1,8 +1,8 @@
-import data from "./data.json";
+import data from "../data.json";
 import { useParams } from "react-router-dom";
 import ErrorView from "./ErrorView";
-import DropdownBtn from "./DropdownBtn";
-import PhotoGallerySwitch from "./PhotoGallerySwitch";
+import DropdownBtn from "../components/DropdownBtn";
+import PhotoGallerySwitch from "../components/PhotoGallerySwitch";
 
 export default function ProductDetailsView() {
   const { productId } = useParams();

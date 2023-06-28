@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import PagesLayout from "./PagesLayout";
-import AboutView from "./AboutView";
-import HomeView from "./HomeView";
-import ErrorView from "./ErrorView";
-import ProductDetailsView from "./ProductDetailsView";
+import PagesLayout from "./pages/PagesLayout";
+import AboutView from "./pages/AboutView";
+import HomeView from "./pages/HomeView";
+import ErrorView from "./pages/ErrorView";
+import ProductDetailsView from "./pages/ProductDetailsView";
 
 export default function App() {
   return (
