@@ -11,9 +11,10 @@ This is a solution to the [OpenClassrooms](https://openclassrooms.com/) project.
 Users should be able to:
 
 - View the optimal layout for the website depending on their device's screen size
-- Visualise photos in a lightbox and switch them
-- Use dropboxes to see and hide content
+- Switch photos in a gallery
+- Use dropdowns to see and hide content
 - Navigate the application from the menu and images
+- See the error page for unexisting URL endpoint
 
 ### Links
 
