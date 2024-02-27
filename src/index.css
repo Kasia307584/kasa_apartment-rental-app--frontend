@@ -211,6 +211,7 @@ ul {
   color: var(--primary-1);
   padding-bottom: 8px;
   font-size: 38px;
+  margin-top: 20px;
 }
 .location {
   color: var(--primary-1);
