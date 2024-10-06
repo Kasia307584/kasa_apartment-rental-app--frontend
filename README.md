@@ -8,7 +8,7 @@ This app was developed as part of the [OpenClassrooms](https://openclassrooms.co
 
 ### Screenshot
 
-![](/src/images/screenshot.png)
+![](/assets/screenshot.png)
 
 ### The challenge
 
