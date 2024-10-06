@@ -2,6 +2,8 @@
 
 Kasa is an apartment rental platform that allows users to browse and explore available apartment listings. Each apartment listing includes detailed descriptions and photo galleries, offering a clear view of the properties. The app features smooth and intuitive navigation, a responsive design that adapts to various screen sizes, and error handling for invalid URLs.
 
+This app was developed as part of the [OpenClassrooms](https://openclassrooms.com/) curriculum.
+
 ## Overview
 
 ### Screenshot
