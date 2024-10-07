@@ -76,7 +76,22 @@ function ProductDetailsView() {
 - **Configure `.gitignore`**: Set up a `.gitignore` file to manage version control effectively by excluding unnecessary files
 - **Organize Project Structure**: Organized project structure to separate static pages (views) and reusable components
 - **Deploy to Vercel**: Deployed the front-end application on `Vercel`
-- **Implement Sticky Footer**: Used CSS to make the footer stick to the bottom of the page (`height: 100%, display: flex, flex-direction: column` set on parent element, then `flex: 1` applied to the div that contains the main content of the page, excluding the footer). This setting allow the content to expad and fill available space in a flex container.
+- **Implement Sticky Footer**: Used CSS to make the footer stick to the bottom of the page
+
+```css
+body,
+html {
+  height: 100%;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.wrapper {
+  flex: 1;
+} /* The .wrapper class is applied to the div that contains the main content of the page, excluding the footer. It uses flex: 1 to allow the content to expand and fill available space in a flex container. */
+```
 
 ### Continued development
 
@@ -87,4 +102,4 @@ function ProductDetailsView() {
 
 ### Useful resources
 
-- [Naming convention](https://medium.com/@wittydeveloper/react-components-naming-convention-%EF%B8%8F-b50303551505) - This helped me apply consistent naming convention to my React components.
+- [Naming convention](https://medium.com/@wittydeveloper/react-components-naming-convention-%EF%B8%8F-b50303551505) - This helped me apply consistent naming convention to my React components
