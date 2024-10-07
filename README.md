@@ -54,18 +54,20 @@ function ProductDetailsView() {
   const product = data.find((item) => item.id === productId);
 
   return (
-    <h1 className="title">{product.title}</h1>
-    <p className="location">{product.location}</p>
-    <div className="dropmenu-wrapper">
-          <DropdownBtn
-            className="dropmenu__details"
-            name="Équipements"
-            text={product.equipments.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          />
-        </div>
-  )
+    <main className="main">
+      <h1 className="title">{product.title}</h1>
+      <p className="location">{product.location}</p>
+      <div className="dropmenu-wrapper">
+        <DropdownBtn
+          className="dropmenu__details"
+          name="Équipements"
+          text={product.equipments.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        />
+      </div>
+    </main>
+  );
 }
 ```
 
