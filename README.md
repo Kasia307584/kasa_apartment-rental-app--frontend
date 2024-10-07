@@ -20,7 +20,7 @@ Users should be able to:
 - Open and close dropdowns to display detailed information
 - Navigate using the menu and images
 - See an error page for non-existent URL endpoints
-- View the optimal layout for the website depending on the user's device's screen size
+- View the optimal layout for the website depending on their device's screen size
 
 ### Links
 
@@ -30,43 +30,59 @@ Users should be able to:
 
 ### Built with
 
-- React and React Router
-- CSS3 and BEM methodology
-- Vercel deployment
+- **React.js** for building the user interface
+- **React Router** for managing navigation and routing between pages
+- **JSON data** for dynamic content within the application
+- **CSS3** and **BEM methodology** for styling and maintainable code structure
+- **Vercel** for seamless deployment and hosting
 
 ### What I learned
 
-- use React and React Router
-- initialize the app using `Create React App` (CRA)
-- create React components following proper naming conventions, such as
-  `DropdownBtn`, `ProductCards`, `PhotoGallerySwitch`, `HomeView`, `AboutView`,`ProductDetailsView`
-- use `JSX` syntax to return HTML within React components
-- use props and React Hooks, including `useState` and `useParams`
-- display data depending on the URL
-- work with `JSON` data within a React project
-- organize project structure to separate static pages (views) and reusable components
-- make the footer stick to the bottom (CSS)
+- **Use React and Router**: Applied React and React Router for building user interfaces and routing
+- **Initialize with CRA**: Initialized the application using `Create React App`
+- **Follow Components Naming Convention**: Followed proper naming conventions by naming components as
+  `DropdownBtn`, `ProductCards`, `PhotoGallerySwitch`, `HomeView`, `AboutView`, `ProductDetailsView`
+- **Utilize `JSX` syntax**: Used `JSX` syntax to return HTML within React components
+- **Utilize Props and Hooks**: Utilized props and React Hooks, including `useState` and `useParams`, to manage state and component behavior
+- **Display URL-Dependent Data**: Displayed data dynamically based on the URL
 
-```css
-body,
-html {
-  height: 100%;
+```javascript
+function ProductDetailsView() {
+  // extract productId from the URL using useParams hook
+  const { productId } = useParams();
+  // find the product in the data that matches the productId from the URL
+  const product = data.find((item) => item.id === productId);
+
+  return (
+    <h1 className="title">{product.title}</h1>
+    <p className="location">{product.location}</p>
+    <div className="dropmenu-wrapper">
+          <DropdownBtn
+            className="dropmenu__details"
+            name="Équipements"
+            text={product.equipments.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          />
+        </div>
+  )
 }
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.wrapper {
-  flex: 1;
-} /* The .wrapper class is applied to the div that contains the main content of the page, excluding the footer. It uses flex: 1 to allow the content to expand and fill available space in a flex container. */
 ```
 
-- configure a `.gitignore` file
-- deploy the front-end app on `Vercel`
+- **Handle JSON Data**: Worked with `JSON` data within a React project
+- **Implement Error Page**: Redirected users to an error page for non-existent URL endpoints
+- **Configure `.gitignore`**: Set up a `.gitignore` file to manage version control effectively by excluding unnecessary files
+- **Organize Project Structure**: Organized project structure to separate static pages (views) and reusable components
+- **Deploy to Vercel**: Deployed the front-end application on `Vercel`
+- **Implement Sticky Footer**: Used CSS to make the footer stick to the bottom of the page (`height: 100%, display: flex, flex-direction: column` set on parent element, then `flex: 1` applied to the div that contains the main content of the page, excluding the footer). This setting allow the content to expad and fill available space in a flex container.
 
 ### Continued development
 
-- remake in Next.js
+- app remake in Next.js
 - use Sass or Bootstrap
 - create a back-end
+- move the router setup from App.js to dedicated file
+
+### Useful resources
+
+- [Naming convention](https://medium.com/@wittydeveloper/react-components-naming-convention-%EF%B8%8F-b50303551505) - This helped me apply consistent naming convention to my React components.
