@@ -53,6 +53,7 @@ function ProductDetailsView() {
   // find the product in the data that matches the productId from the URL
   const product = data.find((item) => item.id === productId);
 
+  // display URL-dependent data
   return (
     <main className="main">
       <h1 className="title">{product.title}</h1>
@@ -97,9 +98,10 @@ html {
 
 - app remake in Next.js
 - use Sass or Bootstrap
-- create a back-end
-- move the router setup from App.js to dedicated file
+- create a backend
+- move the router setup from `App.js` to a dedicated file
 
 ### Useful resources
 
 - [Naming convention](https://medium.com/@wittydeveloper/react-components-naming-convention-%EF%B8%8F-b50303551505) - This helped me apply consistent naming convention to my React components
+- [Sticky footer](https://css-tricks.com/couple-takes-sticky-footer/) - This article explained several ways to make the footer stick to the bottom of the page
