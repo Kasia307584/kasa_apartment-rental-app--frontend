@@ -25,13 +25,14 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [See the live page here](https://kasa-app-five.vercel.app/)
+- The upgrade of the application with TypeScript and GraphQL: [Kasa 2 GitHub repository](https://github.com/Kasia307584/kasa_apartment-rental-app2--frontend)
 
 ## My process
 
 ### Built with
 
 - **React.js** for building the user interface
-- **React Router** for managing navigation and routing between pages
+- **React Router** for enabling navigation and setting up dinamic routing based on product ID
 - **JSON data** for dynamic content within the application
 - **CSS3** and **BEM methodology** for styling and maintainable code structure
 - **Vercel** for seamless deployment and hosting
